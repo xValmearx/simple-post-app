@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block titel %}
+  Home
+{% endblock titel %}
+
+
+
+{% block contents %}
+  <hr>
+  {% for post in post_list %}
+    <div class = "post-entry">
+      <h2><a href = "">{{post.title}}</a></h2>
+      <p>{{post.body}}</p>
+      <hr>
+    </div>
+  {% endfor %}
+{% endblock contents %}
+

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <titel>
+      Django Blog - {% block title %}{% endblock title %}
+    </title>
+
+    <link
+    href = 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400'
+    rel = "stylesheet"
+    >
+
+    <link rel = "stylesheet" href = "{% static 'css/base.css'%}">
+
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a href = {% url "home" %}>Django Blog</a>
+      <h1>
+    </header>
+
+    <div>
+      {% block contents %}
+
+      {% endblock contents %}
+
+    </div>
+
+  </body>
+
+  <footer>
+    {% block footer %}
+    {% endblock footer %}
+  </footer>
+
+
+
+</html>

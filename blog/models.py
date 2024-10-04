@@ -21,4 +21,7 @@ class Post(models.Model):
     def __str__(self):
         """Get absolute url for this instance"""
 
-        return reverse("post_details", kwargs={"pk": self.pk})
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse("post_detail", kwargs={"pk": self.pk})
